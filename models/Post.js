@@ -22,6 +22,8 @@ const postSchema = mongoose.Schema({
         type: Date,
         default: null
     }
-})
+}, {
+    versionKey: false}
+)
 
-module.exports = mongoose.model('Post', postSchema)
+module.exports = mongoose.model('Post', postSchema, 'post')

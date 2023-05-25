@@ -11,15 +11,12 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors())
 
-const postRoutes = require('./routes/pos')
+const postRoutes = require('./routes/Post')
 
 app.use('/post', postRoutes)
 
 app.get('/', (req, res) => {
     res.send('Hello Semua')
-})
-app.get('/mahasiswa', (req, res) => {
-    res.send('Saya Mahasiswa MDP')
 })
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
