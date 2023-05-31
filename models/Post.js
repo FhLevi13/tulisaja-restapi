@@ -7,11 +7,8 @@ const postSchema = mongoose.Schema({
         required: true
     },
     user_id: {
-        type: String,
-        required: true
-    },
-    username: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
         required: true
     },
     created_date: {

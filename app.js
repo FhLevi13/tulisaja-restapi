@@ -11,9 +11,11 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors())
 
-const postRoutes = require('./routes/Post')
+const postRoutes = require('./routes/post')
+const authRoutes = require('./routes/auth')
 
 app.use('/post', postRoutes)
+app.use('/auth', authRoutes)
 
 app.get('/', (req, res) => {
     res.send('Hello Semua')

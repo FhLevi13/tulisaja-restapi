@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "tulis-aja",
+    "name": "tulisaja-restapi",
     "builds": [
        { "src": "app.js", "use": "@vercel/node" }
     ],
