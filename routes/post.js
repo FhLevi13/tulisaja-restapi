@@ -68,10 +68,10 @@ router.post('/', async(req, res) => {
     }
 })
 
-router.put('/:postId', async(req, res) => {
+router.put('/', async(req, res) => {
     const data = {
+        id: req.body.id,
         content: req.body.content,
-        user_id: req.body.user_id,
         modified_date: Date.now()
     }
 
